@@ -165,6 +165,17 @@ const animationTimeline = () => {
       rotation: -180,
       opacity: 0,
     })
+    .staggerFrom(
+      ".profile-picture-side",
+      0.5,
+      {
+        scale: 0,
+        opacity: 0,
+        y: 30,
+        ease: Back.easeOut.config(1.4),
+      },
+      0.2,
+    )
 
     // "Selamat Ulang Tahun!" — animasi huruf
     .staggerFrom(
