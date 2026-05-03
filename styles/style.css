@@ -7,7 +7,9 @@ body {
   margin: 0;
 }
 
-/* Login page styles */
+/* =============================
+   LOGIN PAGE
+   ============================= */
 .login_container {
   display: flex;
   flex-direction: column;
@@ -70,7 +72,9 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
-/* Birtday page styles */
+/* =============================
+   BIRTHDAY PAGE - GENERAL
+   ============================= */
 .song {
   visibility: hidden;
 }
@@ -92,6 +96,9 @@ button[type="submit"]:hover {
   position: absolute;
 }
 
+/* =============================
+   SECTION ONE
+   ============================= */
 .one {
   font-size: 4.5rem;
 }
@@ -101,10 +108,16 @@ button[type="submit"]:hover {
   font-weight: lighter;
 }
 
+/* =============================
+   SECTION THREE
+   ============================= */
 .three {
   font-size: 3rem;
 }
 
+/* =============================
+   SECTION FOUR
+   ============================= */
 .four .text-box {
   border: 2px solid #ccc;
   border-radius: 20px;
@@ -133,6 +146,9 @@ button[type="submit"]:hover {
   padding: 0.5rem 1rem;
 }
 
+/* =============================
+   SECTION FIVE
+   ============================= */
 .five p {
   font-size: 2rem;
   position: absolute;
@@ -160,27 +176,84 @@ button[type="submit"]:hover {
   font-size: 15rem;
 }
 
+/* =============================
+   SECTION SIX - FOTO
+   ============================= */
 .six {
   position: relative;
   top: 10vh;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
+/* Reset semua img di dalam .six */
 .six img {
-  display: inline-block;
-  height: 350px;
-  max-width: 100%;
-  border-radius: 14px;
+  display: block;
+  rotate: 0deg;
+  transform: none;
 }
 
+/* Topi */
 .six .hat {
   position: absolute;
-  left: 41.5%;
-  top: -35%;
+  top: -30px;
+  right: 10px;
   width: 60px;
   rotate: 14deg;
+  transform: none;
 }
 
+/* Grid 3 foto persegi */
+.six .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Foto persegi, lurus, rapi */
+.six .profile-picture {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  border: 2px solid #f9a8d4;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+  rotate: 0deg;
+  transform: none;
+  transition: transform 0.3s ease;
+}
+
+.six .profile-picture:hover {
+  transform: scale(1.04);
+}
+
+/* Teks ucapan */
+.six .wish {
+  text-align: center;
+  max-width: 500px;
+}
+
+.wish-hbd {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wish h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 10px 0 0;
+}
+
+/* =============================
+   SECTION SEVEN - BALON
+   ============================= */
 .ballons img {
   display: inline-block;
   position: absolute;
@@ -198,6 +271,9 @@ button[type="submit"]:hover {
   left: 30%;
 }
 
+/* =============================
+   SECTION EIGHT - CONFETTI
+   ============================= */
 .seven .eight {
   height: 100vh;
   position: fixed;
@@ -268,18 +344,9 @@ button[type="submit"]:hover {
   top: 94vh;
 }
 
-.wish-hbd {
-  font-size: 3em;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.wish h5 {
-  font-size: 2rem;
-  font-weight: lighter;
-  margin: 10px 0 0;
-}
-
+/* =============================
+   SECTION NINE
+   ============================= */
 .nine p {
   font-size: 2rem;
   font-weight: lighter;
@@ -290,33 +357,36 @@ button[type="submit"]:hover {
   z-index: 3;
 }
 
-/* Media Queries */
+/* =============================
+   MEDIA QUERIES
+   ============================= */
 @media screen and (max-height: 1000px) {
   .six .hat {
-    left: 40%;
+    left: auto;
+    right: 10px;
   }
 }
 
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
+@media screen and (max-width: 600px) {
+  .six .photo-grid {
+    max-width: 320px;
   }
-}
 
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
+  .six .profile-picture {
+    height: 100px;
   }
-}
 
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
+  .wish-hbd {
+    font-size: 2.2em;
+  }
+
+  .wish h5 {
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .login_form{
+  .login_form {
     width: 350px;
     height: 250px;
   }
@@ -344,16 +414,7 @@ button[type="submit"]:hover {
   }
 
   .six .hat {
-    /* top: -20px; */
     width: 50px;
-  }
-
-  .wish-hbd {
-    font-size: 2.2em;
-  }
-
-  .wish h5 {
-    font-size: .8rem;
   }
 
   .nine p {

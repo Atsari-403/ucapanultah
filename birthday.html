@@ -13,7 +13,67 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="./styles/style.css">
   <title>Selamat Ulang Tahun!!! Fatimatuz Zahroh :)</title>
+
+  <style>
+    /* ===== SECTION SIX - Layout Foto ===== */
+.six {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 20px;
+}
+
+.six .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.six .profile-picture {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #f9a8d4;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.six .profile-picture:hover {
+  transform: scale(1.04);
+}
+
+.six .hat {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  width: 60px;
+  transform: rotate(20deg);
+}
+
+.six .wish {
+  text-align: center;
+  max-width: 500px;
+}
+
+.six .wish-hbd {
+  font-size: 22px;
+  color: #be185d;
+  margin-bottom: 8px;
+}
+
+.six .wish-text {
+  font-size: 14px;
+  color: #9d174d;
+  line-height: 1.7;
+}
+  </style>
 </head>
+
 
 <body>
 
@@ -71,10 +131,14 @@
     </div>
 
     <div class="six">
-      <img src="./img/foto2.jpeg" alt="Ayanggg" class="profile-picture" id="imagePath" />
-      <img src="./img/foto.jpeg" alt="Ayanggg" class="profile-picture" id="imagePath" />
-      <img src="./img/foto3.jpeg" alt="Ayanggg" class="profile-picture" id="imagePath" />
-      <img src="img/hat.svg" alt="Topi" class="hat" />
+      <div style="position: relative; max-width: 500px; width: 100%;">
+        <img src="img/hat.svg" alt="Topi" class="hat" />
+        <div class="photo-grid">
+          <img src="./img/foto2.jpeg" alt="Foto 1" class="profile-picture" />
+          <img src="./img/foto.jpeg" alt="Foto 2" class="profile-picture" />
+          <img src="./img/foto3.jpeg" alt="Foto 3" class="profile-picture" />
+        </div>
+      </div>
       <div class="wish">
         <h3 class="wish-hbd">Selamat Ulang Tahun!</h3>
         <h5 class="wish-text">
